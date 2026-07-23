@@ -6,8 +6,8 @@
 /* ⬇⬇⬇  BACKEND API URL  ⬇⬇⬇
    Local dev (backend running via `npm start` in /backend): keep as is.
    After you deploy the backend somewhere (Render, Railway, a VPS...),
-   change this to that server's URL, e.g. "https://api.yourdomain.com/api" */
-const API_BASE = 'http://localhost:4000/api';
+   change this to that server's URL, or use a relative path like '/api' for a reverse proxy. */
+const API_BASE = '/api';
 /* ⬆⬆⬆ ------------------------------------------------------ ⬆⬆⬆ */
 
 const LS_TOKEN = 'axr_token';
