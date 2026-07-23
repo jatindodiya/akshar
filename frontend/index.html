@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Akshar International — Export Dashboard</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+<div class="auth-gate" id="authGate"><div class="auth-card" id="authCard"></div></div>
+<div class="app" id="appRoot" style="display:none">
+  <aside class="side">
+    <div class="brand">
+      <div class="logo">
+        <div class="mark">AX</div>
+        <div>
+          <div class="name">Akshar Intl.</div>
+          <div class="sub">Export Desk</div>
+        </div>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="grp">Operations</div>
+      <button data-view="dashboard" class="active"><span class="ic">▤</span> Dashboard</button>
+      <button data-view="pipeline"><span class="ic">▦</span> Pipeline</button>
+      <button data-view="deals"><span class="ic">☰</span> All Inquiries <span class="badge" id="badgeDeals" style="display:none"></span></button>
+      <button data-view="deals" data-preset="followup"><span class="ic">↻</span> Follow-ups <span class="badge" id="badgeFollow" style="display:none;background:var(--blue)"></span></button>
+      <div class="grp">Masters</div>
+      <button data-view="products"><span class="ic">⬡</span> Products</button>
+      <button data-view="clients"><span class="ic">◈</span> Clients</button>
+      <div class="grp">System</div>
+      <button data-view="settings"><span class="ic">⚙</span> Settings</button>
+    </nav>
+    <div class="foot" id="sideFoot">Connecting…</div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">Dashboard</h1>
+        <div class="crumb" id="pageCrumb">Export operations overview</div>
+      </div>
+      <div class="spacer"></div>
+      <button class="btn primary" id="newInquiryBtn">＋ New Inquiry</button>
+    </header>
+    <div class="content" id="content"></div>
+  </main>
+</div>
+
+<div class="overlay" id="overlay"><div class="modal" id="modal"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
